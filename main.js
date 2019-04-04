@@ -2,8 +2,16 @@
 // See LICENSE for details
 
 const {app, BrowserWindow, Menu, protocol, ipcMain} = require('electron');
-const log = require('electron-log');
 const {autoUpdater} = require("electron-updater");
+
+// Setup file logging
+const log = require('electron-log');
+log.transports.file.level = 'info';
+log.transports.file.file = __dirname + 'log.log';
+
+// Log a message
+log.info('log message');
+
 
 //-------------------------------------------------------------------
 // Logging
@@ -117,7 +125,7 @@ app.on('window-all-closed', () => {
 // Auto updates - Option 2 - More control
 //
 // For details about these events, see the Wiki:
-// https://github.com/electron-userland/electron-builder/wiki/Auto-Update#events
+//  
 //
 // The app doesn't need to listen to any events except `update-downloaded`
 //

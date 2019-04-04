@@ -23,13 +23,13 @@
         "zip",
         "dmg"
       ]
-    }
-  },
-  "publish": [
-    {
-      "provider": "github",
-      "owner": "vub",
-      "repo": "electron-updater-example"
-    }
-  ]
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "vub",
+        "repo": "electron-updater-example"
+      }
+    ]
+  }
 }
